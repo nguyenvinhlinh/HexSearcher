@@ -1,0 +1,2 @@
+defmodule HexSearcher do
+end
