@@ -9,8 +9,6 @@ defmodule HexSearcher do
   # - {:error, status: status_code}
   def fetch_xml(search_term) do
     response = HTTPotion.get (@hex_url <> search_term)
-
-    IO.inspect response.body
     if response.status_code == 200 do
       {:ok, body: response.body}
     else
