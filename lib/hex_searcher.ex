@@ -16,11 +16,17 @@ defmodule HexSearcher do
   # - {:ok, body: body}
   # - {:error, status: status_code}
   def fetch_xml(search_term) do
-    response = HTTPotion.get (@hex_url <> search_term)
-    if response.status_code == 200 do
-      {:ok, body: response.body}
-    else
-      {:error, status: response.status_code}
+    try do
+      response = HTTPotion.get (@hex_url <> search_term)
+      if response.status_code == 200 do
+        {:ok, body: response.body}
+      else
+        {:error, status: response.status_code}
+      end
+    rescue
+      e in HTTPotion.HTTPError  ->
+        IO.puts "Internet Connection Error: #{e.message}"
+      exit(1)
     end
   end
   
