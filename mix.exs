@@ -17,7 +17,7 @@ defmodule HexSearcher.Mixfile do
 
   defp deps do
     [
-      {:ibrowse, github: "cmullaparthi/ibrowse", tag: "v4.1.2"},
+      {:ibrowse, "~> 4.2"},
       {:httpotion, "~> 2.1.0"},
       {:floki, "~> 0.7.1"},
       {:table_rex, "~> 0.4.0"}
@@ -35,8 +35,8 @@ defmodule HexSearcher.Mixfile do
   end
 
   defp package do
-    maintainers: ["Nguyen Vinh Linh"],
+    [maintainers: ["Nguyen Vinh Linh"],
     licenses: ["MIT"],
-    links: %{"Github" => "https://github.com/nguyenvinhlinh/HexSearcher"}
+    links: %{"Github" => "https://github.com/nguyenvinhlinh/HexSearcher"}]
   end
 end
