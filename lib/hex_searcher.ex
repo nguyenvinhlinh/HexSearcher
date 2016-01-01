@@ -35,8 +35,9 @@ defmodule HexSearcher do
                   version: version, download: download_counter, url: href}
       Enum.into [package], acc
     end
-  end
-
+    packages
+  end 
+  
   defp get_package_name({"td", _, [{"a", _,[_, package_name]}]}) do
     package_name
     |> String.strip
