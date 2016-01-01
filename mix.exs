@@ -12,7 +12,7 @@ defmodule HexSearcher.Mixfile do
   #
   # Type `mix help compile.app` for more information
   def application do
-    [applications: [:logger, :httpotion]]
+    [applications: [:logger, :httpotion, :table_rex]]
   end
 
   # Dependencies can be Hex packages:
@@ -28,7 +28,8 @@ defmodule HexSearcher.Mixfile do
     [
       {:ibrowse, github: "cmullaparthi/ibrowse", tag: "v4.1.2"},
       {:httpotion, "~> 2.1.0"},
-      {:floki, "~> 0.7.1"}
+      {:floki, "~> 0.7.1"},
+      {:table_rex, "~> 0.4.0"}
     ]
   end
 end
