@@ -1,6 +1,14 @@
 defmodule HexSearcher do
   @hex_url "https://hex.pm/packages?search="
   @website_url "https://hex.pm"
+
+  def main([search_term]) do
+    search_term
+    |> fetch_xml
+    |> crawl_package
+    |> FormatTable.print
+  end
+
   # fetch_xml/1 : fetch the html body, the source if from hex.pm website
   # params:
   # - search_term: the name of package

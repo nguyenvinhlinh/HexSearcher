@@ -5,6 +5,7 @@ defmodule HexSearcher.Mixfile do
     [app: :hex_searcher,
      version: "0.0.1",
      elixir: "~> 1.0",
+     escript: escript_config,
      deps: deps]
   end
 
@@ -14,7 +15,7 @@ defmodule HexSearcher.Mixfile do
   def application do
     [applications: [:logger, :httpotion, :table_rex]]
   end
-
+  
   # Dependencies can be Hex packages:
   #
   #   {:mydep, "~> 0.3.0"}
@@ -31,5 +32,9 @@ defmodule HexSearcher.Mixfile do
       {:floki, "~> 0.7.1"},
       {:table_rex, "~> 0.4.0"}
     ]
+  end
+  
+  defp escript_config do
+    [main_module: HexSearcher]
   end
 end
