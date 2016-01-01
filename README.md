@@ -19,7 +19,7 @@ $ mix escript.build
 $ ./hex_searcher keyword
 ```
 
-## Example
+## Examples
 
 ```bash
 $ ./hex_searcher trot
