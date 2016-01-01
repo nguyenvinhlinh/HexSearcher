@@ -57,6 +57,8 @@ defmodule HexSearcher do
 
   defp get_description({"td", _, [description]}) do
     description
+    |> String.strip
+    |> String.replace "\n", " "
   end
 
   defp get_version({"td", _, [{"span", _, [version]}]}) do
