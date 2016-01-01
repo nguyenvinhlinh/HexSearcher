@@ -3,28 +3,18 @@ defmodule HexSearcher.Mixfile do
 
   def project do
     [app: :hex_searcher,
-     version: "0.0.1",
+     version: "0.3.0",
      elixir: "~> 1.0",
+     description: description,
+     package: package,
      escript: escript_config,
      deps: deps]
   end
-
-  # Configuration for the OTP application
-  #
-  # Type `mix help compile.app` for more information
+  
   def application do
     [applications: [:logger, :httpotion, :table_rex]]
   end
-  
-  # Dependencies can be Hex packages:
-  #
-  #   {:mydep, "~> 0.3.0"}
-  #
-  # Or git/path repositories:
-  #
-  #   {:mydep, git: "https://github.com/elixir-lang/mydep.git", tag: "0.1.0"}
-  #
-  # Type `mix help deps` for more examples and options
+
   defp deps do
     [
       {:ibrowse, github: "cmullaparthi/ibrowse", tag: "v4.1.2"},
@@ -36,5 +26,17 @@ defmodule HexSearcher.Mixfile do
   
   defp escript_config do
     [main_module: HexSearcher]
+  end
+
+  defp description do
+  """
+  Search hex package from terminal
+  """
+  end
+
+  defp package do
+    maintainers: ["Nguyen Vinh Linh"],
+    licenses: ["MIT"],
+    links: %{"Github" => "https://github.com/nguyenvinhlinh/HexSearcher"}
   end
 end
