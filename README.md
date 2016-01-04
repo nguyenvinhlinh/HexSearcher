@@ -17,6 +17,7 @@ $ mix escript.build
 ## Usage
 ```bash
 $ ./hex_searcher keyword
+$ ./hex_searcher keyword page_number
 ```
 
 ## Examples
@@ -54,3 +55,25 @@ $ ./hex_searcher table
 |    table_rex     |                                      Generate configurable text-based tables for display (ASCII & more)                                      |  0.5.0  |    https://hex.pm/packages/table_rex     |        13        |
 +------------------+----------------------------------------------------------------------------------------------------------------------------------------------+---------+------------------------------------------+------------------+
 ```
+
+```bash
+$ ./hex_searcher eli 2
+```
+
+```
++--------------------------------------------------------------------------------------------------------------------------------------------------------+
+|                                                                      Hex Searcher                                                                      |
++-----------------+---------------------------------------------------------------+---------+-----------------------------------------+------------------+
+|  Package Name   |                          Description                          | Version |                  Link                   | Download Counter |
++-----------------+---------------------------------------------------------------+---------+-----------------------------------------+------------------+
+|  rabbitElixir   |             Another Zawgyi <=> Unicode Converter              |  1.0.1  |  https://hex.pm/packages/rabbitElixir   |        23        |
+|     relief      |   A collection of Elixir Stream oriented relief mechanisms.   |  0.0.1  |     https://hex.pm/packages/relief      |        2         |
+|     relisa      |  Fast, simple, and composable deployment library for Elixir.  |  0.1.0  |     https://hex.pm/packages/relisa      |       179        |
+|   sass_elixir   |               A SASS plugin for elixir projects               |  0.0.1  |   https://hex.pm/packages/sass_elixir   |       205        |
+|   ssdb_elixir   |                    SSDB client for Elixir                     |  0.2.2  |   https://hex.pm/packages/ssdb_elixir   |        73        |
+| traitify_elixir |         An Elixir client library for the Traitify API         |  0.1.1  | https://hex.pm/packages/traitify_elixir |        24        |
+|   yaml_elixir   | Yaml parser for Elixir based on native Erlang implementation. |  1.0.0  |   https://hex.pm/packages/yaml_elixir   |       656        |
++-----------------+---------------------------------------------------------------+---------+-----------------------------------------+------------------+
+```
+
+
