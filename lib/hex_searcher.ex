@@ -8,6 +8,12 @@ defmodule HexSearcher do
     |> crawl_package
     |> FormatTable.print
   end
+  
+  def main([search_term, page]) do
+    fetch_xml(search_term, page)
+    |> crawl_package
+    |> FormatTable.print
+  end
 
   # fetch_xml/1 : fetch the html body, the source if from hex.pm website
   # params:
@@ -17,7 +23,22 @@ defmodule HexSearcher do
   # - {:error, status: status_code}
   def fetch_xml(search_term) do
     try do
-      response = HTTPotion.get (@hex_url <> search_term)
+      response = HTTPotion.get(@hex_url <> search_term)
+      if response.status_code == 200 do
+        {:ok, body: response.body}
+      else
+        {:error, status: response.status_code}
+      end
+    rescue
+      e in HTTPotion.HTTPError  ->
+        IO.puts "Internet Connection Error: #{e.message}"
+      exit(1)
+    end
+  end
+
+  def fetch_xml(search_term, page) do
+    try do
+      response = HTTPotion.get(@hex_url<>search_term<>"&page=#{page}")
       if response.status_code == 200 do
         {:ok, body: response.body}
       else
