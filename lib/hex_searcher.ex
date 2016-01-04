@@ -8,6 +8,12 @@ defmodule HexSearcher do
     |> crawl_package
     |> FormatTable.print
   end
+  
+  def main([search_term, page]) do
+    fetch_xml(search_term, page)
+    |> crawl_package
+    |> FormatTable.print
+  end
 
   # fetch_xml/1 : fetch the html body, the source if from hex.pm website
   # params:
