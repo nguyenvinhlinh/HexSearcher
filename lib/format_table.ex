@@ -23,7 +23,6 @@ defmodule FormatTable do
                                                           download: download,
                                                           url: url}) do
     des_line = StringBeautify.beautify(description, @cell_width)
-    number_of_line = Enum.count(des_line)
     to_list = fn (ele, acc) ->
       acc ++  [["", ele, "", "", ""]]
     end

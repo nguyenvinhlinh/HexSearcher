@@ -12,8 +12,9 @@ defmodule StringBeautify do
         ["#{word}", line| prev_lines]
       end
     end
-    
-    lines = Enum.reduce(words, [""], append_line)
-    lines = Enum.reverse(lines)
+
+    words
+    |> Enum.reduce([""], append_line)
+    |> Enum.reverse
   end
 end
