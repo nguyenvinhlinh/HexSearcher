@@ -3,7 +3,7 @@ defmodule HexSearcher.Mixfile do
 
   def project do
     [app: :hex_searcher,
-     version: "0.4.0",
+     version: "1.0.0",
      elixir: "~> 1.0",
      description: description,
      package: package,
@@ -30,7 +30,7 @@ defmodule HexSearcher.Mixfile do
 
   defp description do
   """
-  Search hex package from terminal
+  Search hex packages from terminal
   """
   end
 
