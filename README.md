@@ -1,6 +1,7 @@
 # HexSearcher
-Version: 1.0.0  
-A terminal program to search for Elixir package from **hex.pm**
+Version: 1.0.0  **The library has been deprecated**  
+A terminal program to search for Elixir package from **hex.pm**  
+
 
 ## Installing
 Fetch project dependency
