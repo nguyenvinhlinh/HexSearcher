@@ -1,5 +1,5 @@
 # HexSearcher
-Version: 2.0.0
+Version: 2.0.0  
 A terminal program to search for Elixir package from **hex.pm**  
 
 

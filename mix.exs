@@ -3,7 +3,7 @@ defmodule HexSearcher.Mixfile do
 
   def project do
     [app: :hex_searcher,
-     version: "1.0.0",
+     version: "2.0.0",
      elixir: "~> 1.0",
      description: description,
      package: package,
@@ -20,7 +20,7 @@ defmodule HexSearcher.Mixfile do
       {:ibrowse, "~> 4.2"},
       {:httpotion, "~> 2.1.0"},
       {:floki, "~> 0.7.1"},
-      {:table_rex, "~> 0.4.0"}
+      {:table_rex, "== 0.8.3"}
     ]
   end
   
