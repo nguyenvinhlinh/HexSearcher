@@ -1,5 +1,5 @@
 # HexSearcher
-Version: 1.0.0  **The library has been deprecated**  
+Version: 1.0.0  **The library has not been maintained**  
 A terminal program to search for Elixir package from **hex.pm**  
 
 
